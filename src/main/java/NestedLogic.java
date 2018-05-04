@@ -27,9 +27,9 @@ public class NestedLogic {
 
         if (yearReturned > yearExpected) {
             mFine = YEAR_FIX_FINE;
-        } else if (monthReturned > monthExpected) {
+        } else if (monthReturned > monthExpected && yearReturned == yearExpected) {
             mFine = MONTH_FINE_TAX * (monthReturned - monthExpected);
-        } else if (dayReturned > dayExpected) {
+        } else if (dayReturned > dayExpected && yearReturned == yearExpected && monthReturned == monthExpected) {
             mFine = DAY_FINE_TAX * (dayReturned - dayExpected);
         }
 
